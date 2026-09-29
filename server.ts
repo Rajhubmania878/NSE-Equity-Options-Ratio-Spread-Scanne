@@ -701,6 +701,8 @@ async function startServer() {
   if (!process.env.VERCEL) {
     const isDev = process.env.NODE_ENV !== 'production';
     if (isDev) {
+      const vitePkg = 'vite';
+      const { createServer: createViteServer } = await import(vitePkg);
       const vite = await createViteServer({
         server: { middlewareMode: true },
         appType: 'spa'
