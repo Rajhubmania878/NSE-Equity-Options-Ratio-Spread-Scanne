@@ -385,25 +385,6 @@ function requireAdmin(req: AuthRequest, res: Response, next: NextFunction) {
 const app = express();
 app.use(express.json());
 
-// Vercel Serverless Route Path Normalization Middleware
-app.use((req, res, next) => {
-  // Retrieve original path from Vercel headers if rewritten
-  const originalPath = req.headers['x-matched-path'] || req.headers['x-now-route-matches'];
-  if (originalPath && typeof originalPath === 'string') {
-    // x-matched-path contains the original URL before Vercel rewrites (e.g. /api/angel/status)
-    const urlParts = req.url.split('?');
-    const query = urlParts[1] ? '?' + urlParts[1] : '';
-    req.url = originalPath + query;
-  }
-
-  // Fallback: If Vercel stripped the /api prefix, prepend it so the Express routes match
-  if (req.url && !req.url.startsWith('/api') && req.url !== '/' && !req.url.startsWith('/index.html')) {
-    req.url = '/api' + req.url;
-  }
-
-  next();
-});
-
 async function startServer() {
   const PORT = Number(process.env.PORT) || 3000;
 
