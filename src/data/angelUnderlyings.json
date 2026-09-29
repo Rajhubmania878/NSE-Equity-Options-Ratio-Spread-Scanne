@@ -1,0 +1,2941 @@
+[
+  {
+    "symbol": "360ONE",
+    "name": "360ONE",
+    "lotSize": 500,
+    "strikeStep": 20,
+    "cashToken": "13061",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 1120
+  },
+  {
+    "symbol": "ABB",
+    "name": "ABB",
+    "lotSize": 125,
+    "strikeStep": 100,
+    "cashToken": "13",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Capital Goods & Defense",
+    "spotPrice": 7500
+  },
+  {
+    "symbol": "ABCAPITAL",
+    "name": "ABCAPITAL",
+    "lotSize": 3100,
+    "strikeStep": 5,
+    "cashToken": "21614",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 410
+  },
+  {
+    "symbol": "ADANIENSOL",
+    "name": "ADANIENSOL",
+    "lotSize": 675,
+    "strikeStep": 20,
+    "cashToken": "10217",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Power & Renewable",
+    "spotPrice": 1480
+  },
+  {
+    "symbol": "ADANIENT",
+    "name": "ADANIENT",
+    "lotSize": 309,
+    "strikeStep": 50,
+    "cashToken": "25",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Infrastructure & Logistics",
+    "spotPrice": 3000
+  },
+  {
+    "symbol": "ADANIGREEN",
+    "name": "ADANIGREEN",
+    "lotSize": 600,
+    "strikeStep": 20,
+    "cashToken": "3563",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Power & Renewable",
+    "spotPrice": 1320
+  },
+  {
+    "symbol": "ADANIPORTS",
+    "name": "ADANIPORTS",
+    "lotSize": 475,
+    "strikeStep": 20,
+    "cashToken": "15083",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Infrastructure & Logistics",
+    "spotPrice": 1700
+  },
+  {
+    "symbol": "ADANIPOWER",
+    "name": "ADANIPOWER",
+    "lotSize": 3550,
+    "strikeStep": 5,
+    "cashToken": "17388",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Power & Renewable",
+    "spotPrice": 210
+  },
+  {
+    "symbol": "ALKEM",
+    "name": "ALKEM",
+    "lotSize": 125,
+    "strikeStep": 50,
+    "cashToken": "11703",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Healthcare & Pharma",
+    "spotPrice": 5400
+  },
+  {
+    "symbol": "AMBER",
+    "name": "AMBER",
+    "lotSize": 100,
+    "strikeStep": 100,
+    "cashToken": "1185",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 7400
+  },
+  {
+    "symbol": "AMBUJACEM",
+    "name": "AMBUJACEM",
+    "lotSize": 1200,
+    "strikeStep": 5,
+    "cashToken": "1270",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Cement & Construction",
+    "spotPrice": 410
+  },
+  {
+    "symbol": "ANGELONE",
+    "name": "ANGELONE",
+    "lotSize": 2500,
+    "strikeStep": 5,
+    "cashToken": "324",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 295
+  },
+  {
+    "symbol": "APLAPOLLO",
+    "name": "APLAPOLLO",
+    "lotSize": 350,
+    "strikeStep": 20,
+    "cashToken": "25780",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 2180
+  },
+  {
+    "symbol": "APOLLOHOSP",
+    "name": "APOLLOHOSP",
+    "lotSize": 125,
+    "strikeStep": 100,
+    "cashToken": "157",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Healthcare & Pharma",
+    "spotPrice": 8900
+  },
+  {
+    "symbol": "ASHOKLEY",
+    "name": "ASHOKLEY",
+    "lotSize": 5000,
+    "strikeStep": 2.5,
+    "cashToken": "212",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Automobile",
+    "spotPrice": 170
+  },
+  {
+    "symbol": "ASIANPAINT",
+    "name": "ASIANPAINT",
+    "lotSize": 250,
+    "strikeStep": 20,
+    "cashToken": "236",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 2600
+  },
+  {
+    "symbol": "ASTRAL",
+    "name": "ASTRAL",
+    "lotSize": 425,
+    "strikeStep": 20,
+    "cashToken": "14418",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Capital Goods & Defense",
+    "spotPrice": 1480
+  },
+  {
+    "symbol": "ATHERENERG",
+    "name": "ATHERENERG",
+    "lotSize": 375,
+    "strikeStep": 20,
+    "cashToken": "757645",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Automobile",
+    "spotPrice": 1600
+  },
+  {
+    "symbol": "AUBANK",
+    "name": "AUBANK",
+    "lotSize": 1000,
+    "strikeStep": 20,
+    "cashToken": "21238",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 1060
+  },
+  {
+    "symbol": "AUROPHARMA",
+    "name": "AUROPHARMA",
+    "lotSize": 550,
+    "strikeStep": 20,
+    "cashToken": "275",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Healthcare & Pharma",
+    "spotPrice": 1660
+  },
+  {
+    "symbol": "AXISBANK",
+    "name": "AXISBANK",
+    "lotSize": 625,
+    "strikeStep": 20,
+    "cashToken": "5900",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 1260
+  },
+  {
+    "symbol": "BAJAJ-AUTO",
+    "name": "BAJAJ-AUTO",
+    "lotSize": 75,
+    "strikeStep": 100,
+    "cashToken": "16669",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Automobile",
+    "spotPrice": 11600
+  },
+  {
+    "symbol": "BAJAJFINSV",
+    "name": "BAJAJFINSV",
+    "lotSize": 300,
+    "strikeStep": 20,
+    "cashToken": "16675",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 1940
+  },
+  {
+    "symbol": "BAJAJHLDNG",
+    "name": "BAJAJHLDNG",
+    "lotSize": 75,
+    "strikeStep": 100,
+    "cashToken": "305",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 11200
+  },
+  {
+    "symbol": "BAJFINANCE",
+    "name": "BAJFINANCE",
+    "lotSize": 750,
+    "strikeStep": 10,
+    "cashToken": "317",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 1060
+  },
+  {
+    "symbol": "BANDHANBNK",
+    "name": "BANDHANBNK",
+    "lotSize": 3600,
+    "strikeStep": 5,
+    "cashToken": "2263",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 185
+  },
+  {
+    "symbol": "BANKBARODA",
+    "name": "BANKBARODA",
+    "lotSize": 2925,
+    "strikeStep": 5,
+    "cashToken": "4668",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 240
+  },
+  {
+    "symbol": "BANKINDIA",
+    "name": "BANKINDIA",
+    "lotSize": 5200,
+    "strikeStep": 2.5,
+    "cashToken": "4745",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 137.5
+  },
+  {
+    "symbol": "BDL",
+    "name": "BDL",
+    "lotSize": 425,
+    "strikeStep": 20,
+    "cashToken": "2144",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Capital Goods & Defense",
+    "spotPrice": 1260
+  },
+  {
+    "symbol": "BEL",
+    "name": "BEL",
+    "lotSize": 1425,
+    "strikeStep": 5,
+    "cashToken": "383",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Capital Goods & Defense",
+    "spotPrice": 395
+  },
+  {
+    "symbol": "BHARATFORG",
+    "name": "BHARATFORG",
+    "lotSize": 500,
+    "strikeStep": 20,
+    "cashToken": "422",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Automobile",
+    "spotPrice": 2080
+  },
+  {
+    "symbol": "BHARTIARTL",
+    "name": "BHARTIARTL",
+    "lotSize": 475,
+    "strikeStep": 20,
+    "cashToken": "10604",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Telecom & Media",
+    "spotPrice": 1900
+  },
+  {
+    "symbol": "BHEL",
+    "name": "BHEL",
+    "lotSize": 2625,
+    "strikeStep": 5,
+    "cashToken": "438",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Capital Goods & Defense",
+    "spotPrice": 425
+  },
+  {
+    "symbol": "BIOCON",
+    "name": "BIOCON",
+    "lotSize": 2500,
+    "strikeStep": 5,
+    "cashToken": "11373",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Healthcare & Pharma",
+    "spotPrice": 405
+  },
+  {
+    "symbol": "BLUESTARCO",
+    "name": "BLUESTARCO",
+    "lotSize": 325,
+    "strikeStep": 20,
+    "cashToken": "8311",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 1520
+  },
+  {
+    "symbol": "BOSCHLTD",
+    "name": "BOSCHLTD",
+    "lotSize": 25,
+    "strikeStep": 500,
+    "cashToken": "2181",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Automobile",
+    "spotPrice": 46500
+  },
+  {
+    "symbol": "BPCL",
+    "name": "BPCL",
+    "lotSize": 1975,
+    "strikeStep": 5,
+    "cashToken": "526",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Energy & Oil",
+    "spotPrice": 315
+  },
+  {
+    "symbol": "BRITANNIA",
+    "name": "BRITANNIA",
+    "lotSize": 125,
+    "strikeStep": 50,
+    "cashToken": "547",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "FMCG & Consumer",
+    "spotPrice": 5250
+  },
+  {
+    "symbol": "BSE",
+    "name": "BSE",
+    "lotSize": 200,
+    "strikeStep": 100,
+    "cashToken": "19585",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 3300
+  },
+  {
+    "symbol": "CAMS",
+    "name": "CAMS",
+    "lotSize": 825,
+    "strikeStep": 10,
+    "cashToken": "342",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 760
+  },
+  {
+    "symbol": "CANBK",
+    "name": "CANBK",
+    "lotSize": 6750,
+    "strikeStep": 2.5,
+    "cashToken": "10794",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 125
+  },
+  {
+    "symbol": "CDSL",
+    "name": "CDSL",
+    "lotSize": 475,
+    "strikeStep": 20,
+    "cashToken": "21174",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 1360
+  },
+  {
+    "symbol": "CGPOWER",
+    "name": "CGPOWER",
+    "lotSize": 850,
+    "strikeStep": 20,
+    "cashToken": "760",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 880
+  },
+  {
+    "symbol": "CHOLAFIN",
+    "name": "CHOLAFIN",
+    "lotSize": 625,
+    "strikeStep": 20,
+    "cashToken": "685",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 1760
+  },
+  {
+    "symbol": "CIPLA",
+    "name": "CIPLA",
+    "lotSize": 425,
+    "strikeStep": 10,
+    "cashToken": "694",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Healthcare & Pharma",
+    "spotPrice": 1410
+  },
+  {
+    "symbol": "COALINDIA",
+    "name": "COALINDIA",
+    "lotSize": 1350,
+    "strikeStep": 5,
+    "cashToken": "20374",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 415
+  },
+  {
+    "symbol": "COCHINSHIP",
+    "name": "COCHINSHIP",
+    "lotSize": 400,
+    "strikeStep": 20,
+    "cashToken": "21508",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Capital Goods & Defense",
+    "spotPrice": 1440
+  },
+  {
+    "symbol": "COFORGE",
+    "name": "COFORGE",
+    "lotSize": 475,
+    "strikeStep": 20,
+    "cashToken": "11543",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Information Technology",
+    "spotPrice": 1900
+  },
+  {
+    "symbol": "COLPAL",
+    "name": "COLPAL",
+    "lotSize": 275,
+    "strikeStep": 20,
+    "cashToken": "15141",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "FMCG & Consumer",
+    "spotPrice": 1940
+  },
+  {
+    "symbol": "CONCOR",
+    "name": "CONCOR",
+    "lotSize": 1250,
+    "strikeStep": 5,
+    "cashToken": "4749",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Infrastructure & Logistics",
+    "spotPrice": 495
+  },
+  {
+    "symbol": "CROMPTON",
+    "name": "CROMPTON",
+    "lotSize": 2150,
+    "strikeStep": 5,
+    "cashToken": "17094",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 250
+  },
+  {
+    "symbol": "CUMMINSIND",
+    "name": "CUMMINSIND",
+    "lotSize": 200,
+    "strikeStep": 100,
+    "cashToken": "1901",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Capital Goods & Defense",
+    "spotPrice": 5200
+  },
+  {
+    "symbol": "DABUR",
+    "name": "DABUR",
+    "lotSize": 1250,
+    "strikeStep": 5,
+    "cashToken": "772",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "FMCG & Consumer",
+    "spotPrice": 405
+  },
+  {
+    "symbol": "DELHIVERY",
+    "name": "DELHIVERY",
+    "lotSize": 2075,
+    "strikeStep": 5,
+    "cashToken": "9599",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Infrastructure & Logistics",
+    "spotPrice": 445
+  },
+  {
+    "symbol": "DIVISLAB",
+    "name": "DIVISLAB",
+    "lotSize": 100,
+    "strikeStep": 100,
+    "cashToken": "10940",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Healthcare & Pharma",
+    "spotPrice": 8700
+  },
+  {
+    "symbol": "DIXON",
+    "name": "DIXON",
+    "lotSize": 50,
+    "strikeStep": 250,
+    "cashToken": "21690",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 14000
+  },
+  {
+    "symbol": "DLF",
+    "name": "DLF",
+    "lotSize": 950,
+    "strikeStep": 10,
+    "cashToken": "14732",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 660
+  },
+  {
+    "symbol": "DMART",
+    "name": "DMART",
+    "lotSize": 150,
+    "strikeStep": 50,
+    "cashToken": "19913",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Retail & Consumer",
+    "spotPrice": 3900
+  },
+  {
+    "symbol": "DRREDDY",
+    "name": "DRREDDY",
+    "lotSize": 625,
+    "strikeStep": 10,
+    "cashToken": "881",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Healthcare & Pharma",
+    "spotPrice": 1180
+  },
+  {
+    "symbol": "EICHERMOT",
+    "name": "EICHERMOT",
+    "lotSize": 100,
+    "strikeStep": 100,
+    "cashToken": "910",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Automobile",
+    "spotPrice": 7700
+  },
+  {
+    "symbol": "ETERNAL",
+    "name": "ETERNAL",
+    "lotSize": 2425,
+    "strikeStep": 5,
+    "cashToken": "5097",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 315
+  },
+  {
+    "symbol": "FEDERALBNK",
+    "name": "FEDERALBNK",
+    "lotSize": 2500,
+    "strikeStep": 5,
+    "cashToken": "1023",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 345
+  },
+  {
+    "symbol": "FORCEMOT",
+    "name": "FORCEMOT",
+    "lotSize": 25,
+    "strikeStep": 500,
+    "cashToken": "11573",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 18500
+  },
+  {
+    "symbol": "FORTIS",
+    "name": "FORTIS",
+    "lotSize": 775,
+    "strikeStep": 10,
+    "cashToken": "14592",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 890
+  },
+  {
+    "symbol": "GAIL",
+    "name": "GAIL",
+    "lotSize": 3550,
+    "strikeStep": 2.5,
+    "cashToken": "4717",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Energy & Oil",
+    "spotPrice": 175
+  },
+  {
+    "symbol": "GLENMARK",
+    "name": "GLENMARK",
+    "lotSize": 375,
+    "strikeStep": 20,
+    "cashToken": "7406",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Healthcare & Pharma",
+    "spotPrice": 2420
+  },
+  {
+    "symbol": "GMRAIRPORT",
+    "name": "GMRAIRPORT",
+    "lotSize": 6975,
+    "strikeStep": 1,
+    "cashToken": "13528",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 99
+  },
+  {
+    "symbol": "GODFRYPHLP",
+    "name": "GODFRYPHLP",
+    "lotSize": 275,
+    "strikeStep": 50,
+    "cashToken": "1181",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 2100
+  },
+  {
+    "symbol": "GODREJCP",
+    "name": "GODREJCP",
+    "lotSize": 500,
+    "strikeStep": 10,
+    "cashToken": "10099",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "FMCG & Consumer",
+    "spotPrice": 940
+  },
+  {
+    "symbol": "GODREJPROP",
+    "name": "GODREJPROP",
+    "lotSize": 325,
+    "strikeStep": 20,
+    "cashToken": "17875",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 1880
+  },
+  {
+    "symbol": "GRASIM",
+    "name": "GRASIM",
+    "lotSize": 250,
+    "strikeStep": 20,
+    "cashToken": "1232",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 3280
+  },
+  {
+    "symbol": "GVT&D",
+    "name": "GVT&D",
+    "lotSize": 125,
+    "strikeStep": 100,
+    "cashToken": "16783",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 4400
+  },
+  {
+    "symbol": "HAL",
+    "name": "HAL",
+    "lotSize": 150,
+    "strikeStep": 50,
+    "cashToken": "2303",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Capital Goods & Defense",
+    "spotPrice": 4850
+  },
+  {
+    "symbol": "HAVELLS",
+    "name": "HAVELLS",
+    "lotSize": 500,
+    "strikeStep": 20,
+    "cashToken": "9819",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Capital Goods & Defense",
+    "spotPrice": 1200
+  },
+  {
+    "symbol": "HCLTECH",
+    "name": "HCLTECH",
+    "lotSize": 400,
+    "strikeStep": 10,
+    "cashToken": "7229",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Information Technology",
+    "spotPrice": 1290
+  },
+  {
+    "symbol": "HDFCAMC",
+    "name": "HDFCAMC",
+    "lotSize": 300,
+    "strikeStep": 50,
+    "cashToken": "4244",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 2500
+  },
+  {
+    "symbol": "HDFCBANK",
+    "name": "HDFCBANK",
+    "lotSize": 650,
+    "strikeStep": 10,
+    "cashToken": "1333",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 740
+  },
+  {
+    "symbol": "HDFCLIFE",
+    "name": "HDFCLIFE",
+    "lotSize": 1100,
+    "strikeStep": 5,
+    "cashToken": "467",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 540
+  },
+  {
+    "symbol": "HEROMOTOCO",
+    "name": "HEROMOTOCO",
+    "lotSize": 150,
+    "strikeStep": 100,
+    "cashToken": "1348",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Automobile",
+    "spotPrice": 5500
+  },
+  {
+    "symbol": "HINDALCO",
+    "name": "HINDALCO",
+    "lotSize": 700,
+    "strikeStep": 20,
+    "cashToken": "1363",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Metals & Mining",
+    "spotPrice": 1020
+  },
+  {
+    "symbol": "HINDPETRO",
+    "name": "HINDPETRO",
+    "lotSize": 2025,
+    "strikeStep": 0.75,
+    "cashToken": "1406",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 370
+  },
+  {
+    "symbol": "HINDUNILVR",
+    "name": "HINDUNILVR",
+    "lotSize": 300,
+    "strikeStep": 20,
+    "cashToken": "1394",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "FMCG & Consumer",
+    "spotPrice": 2020
+  },
+  {
+    "symbol": "HINDZINC",
+    "name": "HINDZINC",
+    "lotSize": 1225,
+    "strikeStep": 10,
+    "cashToken": "1424",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 590
+  },
+  {
+    "symbol": "HYUNDAI",
+    "name": "HYUNDAI",
+    "lotSize": 275,
+    "strikeStep": 20,
+    "cashToken": "25844",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 2160
+  },
+  {
+    "symbol": "ICICIBANK",
+    "name": "ICICIBANK",
+    "lotSize": 700,
+    "strikeStep": 10,
+    "cashToken": "4963",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 1380
+  },
+  {
+    "symbol": "ICICIGI",
+    "name": "ICICIGI",
+    "lotSize": 325,
+    "strikeStep": 20,
+    "cashToken": "21770",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 1560
+  },
+  {
+    "symbol": "ICICIPRULI",
+    "name": "ICICIPRULI",
+    "lotSize": 925,
+    "strikeStep": 5,
+    "cashToken": "18652",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 480
+  },
+  {
+    "symbol": "IDEA",
+    "name": "IDEA",
+    "lotSize": 71475,
+    "strikeStep": 1,
+    "cashToken": "14366",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Telecom & Media",
+    "spotPrice": 15
+  },
+  {
+    "symbol": "IDFCFIRSTB",
+    "name": "IDFCFIRSTB",
+    "lotSize": 9275,
+    "strikeStep": 1,
+    "cashToken": "11184",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 83
+  },
+  {
+    "symbol": "IEX",
+    "name": "IEX",
+    "lotSize": 4350,
+    "strikeStep": 2.5,
+    "cashToken": "220",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 122.5
+  },
+  {
+    "symbol": "INDHOTEL",
+    "name": "INDHOTEL",
+    "lotSize": 1000,
+    "strikeStep": 10,
+    "cashToken": "1512",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 730
+  },
+  {
+    "symbol": "INDIANB",
+    "name": "INDIANB",
+    "lotSize": 1000,
+    "strikeStep": 10,
+    "cashToken": "14309",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 850
+  },
+  {
+    "symbol": "INDIGO",
+    "name": "INDIGO",
+    "lotSize": 150,
+    "strikeStep": 100,
+    "cashToken": "11195",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 5100
+  },
+  {
+    "symbol": "INDUSINDBK",
+    "name": "INDUSINDBK",
+    "lotSize": 700,
+    "strikeStep": 10,
+    "cashToken": "5258",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 950
+  },
+  {
+    "symbol": "INDUSTOWER",
+    "name": "INDUSTOWER",
+    "lotSize": 1700,
+    "strikeStep": 1,
+    "cashToken": "29135",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Telecom & Media",
+    "spotPrice": 380
+  },
+  {
+    "symbol": "INFY",
+    "name": "INFY",
+    "lotSize": 400,
+    "strikeStep": 20,
+    "cashToken": "1594",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Information Technology",
+    "spotPrice": 1100
+  },
+  {
+    "symbol": "INOXWIND",
+    "name": "INOXWIND",
+    "lotSize": 6400,
+    "strikeStep": 2.5,
+    "cashToken": "7852",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 77.5
+  },
+  {
+    "symbol": "IOC",
+    "name": "IOC",
+    "lotSize": 4875,
+    "strikeStep": 2.5,
+    "cashToken": "1624",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Energy & Oil",
+    "spotPrice": 137.5
+  },
+  {
+    "symbol": "IREDA",
+    "name": "IREDA",
+    "lotSize": 4525,
+    "strikeStep": 2.5,
+    "cashToken": "20261",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 117.5
+  },
+  {
+    "symbol": "IRFC",
+    "name": "IRFC",
+    "lotSize": 5425,
+    "strikeStep": 1,
+    "cashToken": "2029",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 85
+  },
+  {
+    "symbol": "ITC",
+    "name": "ITC",
+    "lotSize": 1725,
+    "strikeStep": 2.5,
+    "cashToken": "1660",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "FMCG & Consumer",
+    "spotPrice": 272.5
+  },
+  {
+    "symbol": "JINDALSTEL",
+    "name": "JINDALSTEL",
+    "lotSize": 625,
+    "strikeStep": 20,
+    "cashToken": "6733",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Metals & Mining",
+    "spotPrice": 1140
+  },
+  {
+    "symbol": "JIOFIN",
+    "name": "JIOFIN",
+    "lotSize": 2350,
+    "strikeStep": 2.5,
+    "cashToken": "18143",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 242.5
+  },
+  {
+    "symbol": "JSWENERGY",
+    "name": "JSWENERGY",
+    "lotSize": 1075,
+    "strikeStep": 10,
+    "cashToken": "17869",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Power & Renewable",
+    "spotPrice": 540
+  },
+  {
+    "symbol": "JSWSTEEL",
+    "name": "JSWSTEEL",
+    "lotSize": 675,
+    "strikeStep": 20,
+    "cashToken": "11723",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Metals & Mining",
+    "spotPrice": 1300
+  },
+  {
+    "symbol": "JUBLFOOD",
+    "name": "JUBLFOOD",
+    "lotSize": 1250,
+    "strikeStep": 5,
+    "cashToken": "18096",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 490
+  },
+  {
+    "symbol": "KALYANKJIL",
+    "name": "KALYANKJIL",
+    "lotSize": 1350,
+    "strikeStep": 5,
+    "cashToken": "2955",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Retail & Consumer",
+    "spotPrice": 600
+  },
+  {
+    "symbol": "KAYNES",
+    "name": "KAYNES",
+    "lotSize": 150,
+    "strikeStep": 50,
+    "cashToken": "12092",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 3700
+  },
+  {
+    "symbol": "KEI",
+    "name": "KEI",
+    "lotSize": 175,
+    "strikeStep": 100,
+    "cashToken": "13310",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Capital Goods & Defense",
+    "spotPrice": 5200
+  },
+  {
+    "symbol": "KFINTECH",
+    "name": "KFINTECH",
+    "lotSize": 575,
+    "strikeStep": 20,
+    "cashToken": "13359",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 940
+  },
+  {
+    "symbol": "KOTAKBANK",
+    "name": "KOTAKBANK",
+    "lotSize": 2000,
+    "strikeStep": 5,
+    "cashToken": "1922",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 410
+  },
+  {
+    "symbol": "KPITTECH",
+    "name": "KPITTECH",
+    "lotSize": 775,
+    "strikeStep": 10,
+    "cashToken": "9683",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Information Technology",
+    "spotPrice": 570
+  },
+  {
+    "symbol": "LAURUSLABS",
+    "name": "LAURUSLABS",
+    "lotSize": 850,
+    "strikeStep": 20,
+    "cashToken": "19234",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 1920
+  },
+  {
+    "symbol": "LICHSGFIN",
+    "name": "LICHSGFIN",
+    "lotSize": 1000,
+    "strikeStep": 10,
+    "cashToken": "1997",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 540
+  },
+  {
+    "symbol": "LICI",
+    "name": "LICI",
+    "lotSize": 1400,
+    "strikeStep": 5,
+    "cashToken": "9480",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 410
+  },
+  {
+    "symbol": "LODHA",
+    "name": "LODHA",
+    "lotSize": 625,
+    "strikeStep": 20,
+    "cashToken": "3220",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 1200
+  },
+  {
+    "symbol": "LT",
+    "name": "LT",
+    "lotSize": 175,
+    "strikeStep": 50,
+    "cashToken": "11483",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Capital Goods & Defense",
+    "spotPrice": 3950
+  },
+  {
+    "symbol": "LTF",
+    "name": "LTF",
+    "lotSize": 2250,
+    "strikeStep": 5,
+    "cashToken": "24948",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 305
+  },
+  {
+    "symbol": "LTM",
+    "name": "LTM",
+    "lotSize": 150,
+    "strikeStep": 50,
+    "cashToken": "17818",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 4500
+  },
+  {
+    "symbol": "LUPIN",
+    "name": "LUPIN",
+    "lotSize": 425,
+    "strikeStep": 20,
+    "cashToken": "10440",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Healthcare & Pharma",
+    "spotPrice": 2200
+  },
+  {
+    "symbol": "M&M",
+    "name": "M&M",
+    "lotSize": 200,
+    "strikeStep": 50,
+    "cashToken": "2031",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Automobile",
+    "spotPrice": 3250
+  },
+  {
+    "symbol": "MAHABANK",
+    "name": "MAHABANK",
+    "lotSize": 6500,
+    "strikeStep": 1,
+    "cashToken": "11377",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 83
+  },
+  {
+    "symbol": "MANAPPURAM",
+    "name": "MANAPPURAM",
+    "lotSize": 3000,
+    "strikeStep": 5,
+    "cashToken": "19061",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 340
+  },
+  {
+    "symbol": "MANKIND",
+    "name": "MANKIND",
+    "lotSize": 250,
+    "strikeStep": 20,
+    "cashToken": "15380",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Healthcare & Pharma",
+    "spotPrice": 2400
+  },
+  {
+    "symbol": "MARICO",
+    "name": "MARICO",
+    "lotSize": 1200,
+    "strikeStep": 10,
+    "cashToken": "4067",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "FMCG & Consumer",
+    "spotPrice": 830
+  },
+  {
+    "symbol": "MARUTI",
+    "name": "MARUTI",
+    "lotSize": 50,
+    "strikeStep": 100,
+    "cashToken": "10999",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Automobile",
+    "spotPrice": 13100
+  },
+  {
+    "symbol": "MAXHEALTH",
+    "name": "MAXHEALTH",
+    "lotSize": 525,
+    "strikeStep": 10,
+    "cashToken": "22377",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 1050
+  },
+  {
+    "symbol": "MAZDOCK",
+    "name": "MAZDOCK",
+    "lotSize": 225,
+    "strikeStep": 50,
+    "cashToken": "509",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Capital Goods & Defense",
+    "spotPrice": 2400
+  },
+  {
+    "symbol": "MCX",
+    "name": "MCX",
+    "lotSize": 225,
+    "strikeStep": 50,
+    "cashToken": "31181",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 3100
+  },
+  {
+    "symbol": "MFSL",
+    "name": "MFSL",
+    "lotSize": 400,
+    "strikeStep": 20,
+    "cashToken": "2142",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 1500
+  },
+  {
+    "symbol": "MOTHERSON",
+    "name": "MOTHERSON",
+    "lotSize": 6150,
+    "strikeStep": 2.5,
+    "cashToken": "4204",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Automobile",
+    "spotPrice": 160
+  },
+  {
+    "symbol": "MOTILALOFS",
+    "name": "MOTILALOFS",
+    "lotSize": 775,
+    "strikeStep": 20,
+    "cashToken": "14947",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 960
+  },
+  {
+    "symbol": "MPHASIS",
+    "name": "MPHASIS",
+    "lotSize": 275,
+    "strikeStep": 12,
+    "cashToken": "4503",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Information Technology",
+    "spotPrice": 2350
+  },
+  {
+    "symbol": "MUTHOOTFIN",
+    "name": "MUTHOOTFIN",
+    "lotSize": 275,
+    "strikeStep": 50,
+    "cashToken": "23650",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 2950
+  },
+  {
+    "symbol": "NAM-INDIA",
+    "name": "NAM-INDIA",
+    "lotSize": 625,
+    "strikeStep": 20,
+    "cashToken": "357",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 1160
+  },
+  {
+    "symbol": "NATIONALUM",
+    "name": "NATIONALUM",
+    "lotSize": 1875,
+    "strikeStep": 10,
+    "cashToken": "6364",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Metals & Mining",
+    "spotPrice": 380
+  },
+  {
+    "symbol": "NAUKRI",
+    "name": "NAUKRI",
+    "lotSize": 550,
+    "strikeStep": 20,
+    "cashToken": "13751",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Information Technology",
+    "spotPrice": 1280
+  },
+  {
+    "symbol": "NBCC",
+    "name": "NBCC",
+    "lotSize": 6500,
+    "strikeStep": 2.5,
+    "cashToken": "31415",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 90
+  },
+  {
+    "symbol": "NESTLEIND",
+    "name": "NESTLEIND",
+    "lotSize": 500,
+    "strikeStep": 10,
+    "cashToken": "17963",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "FMCG & Consumer",
+    "spotPrice": 1440
+  },
+  {
+    "symbol": "NHPC",
+    "name": "NHPC",
+    "lotSize": 6950,
+    "strikeStep": 1,
+    "cashToken": "17400",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Power & Renewable",
+    "spotPrice": 78
+  },
+  {
+    "symbol": "NMDC",
+    "name": "NMDC",
+    "lotSize": 6750,
+    "strikeStep": 1,
+    "cashToken": "15332",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Metals & Mining",
+    "spotPrice": 83
+  },
+  {
+    "symbol": "NTPC",
+    "name": "NTPC",
+    "lotSize": 1500,
+    "strikeStep": 5,
+    "cashToken": "11630",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Power & Renewable",
+    "spotPrice": 335
+  },
+  {
+    "symbol": "NYKAA",
+    "name": "NYKAA",
+    "lotSize": 3125,
+    "strikeStep": 5,
+    "cashToken": "6545",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Retail & Consumer",
+    "spotPrice": 335
+  },
+  {
+    "symbol": "OBEROIRLTY",
+    "name": "OBEROIRLTY",
+    "lotSize": 350,
+    "strikeStep": 20,
+    "cashToken": "20242",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 1840
+  },
+  {
+    "symbol": "OFSS",
+    "name": "OFSS",
+    "lotSize": 100,
+    "strikeStep": 100,
+    "cashToken": "10738",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 11300
+  },
+  {
+    "symbol": "OIL",
+    "name": "OIL",
+    "lotSize": 1400,
+    "strikeStep": 5,
+    "cashToken": "17438",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Energy & Oil",
+    "spotPrice": 480
+  },
+  {
+    "symbol": "ONGC",
+    "name": "ONGC",
+    "lotSize": 2250,
+    "strikeStep": 2.5,
+    "cashToken": "2475",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Energy & Oil",
+    "spotPrice": 237.5
+  },
+  {
+    "symbol": "PAGEIND",
+    "name": "PAGEIND",
+    "lotSize": 20,
+    "strikeStep": 500,
+    "cashToken": "14413",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Retail & Consumer",
+    "spotPrice": 37000
+  },
+  {
+    "symbol": "PATANJALI",
+    "name": "PATANJALI",
+    "lotSize": 1075,
+    "strikeStep": 5,
+    "cashToken": "17029",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 375
+  },
+  {
+    "symbol": "PAYTM",
+    "name": "PAYTM",
+    "lotSize": 725,
+    "strikeStep": 20,
+    "cashToken": "6705",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 1640
+  },
+  {
+    "symbol": "PERSISTENT",
+    "name": "PERSISTENT",
+    "lotSize": 125,
+    "strikeStep": 100,
+    "cashToken": "18365",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Information Technology",
+    "spotPrice": 5500
+  },
+  {
+    "symbol": "PETRONET",
+    "name": "PETRONET",
+    "lotSize": 1900,
+    "strikeStep": 5,
+    "cashToken": "11351",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Energy & Oil",
+    "spotPrice": 290
+  },
+  {
+    "symbol": "PFC",
+    "name": "PFC",
+    "lotSize": 1300,
+    "strikeStep": 5,
+    "cashToken": "14299",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 380
+  },
+  {
+    "symbol": "PGEL",
+    "name": "PGEL",
+    "lotSize": 950,
+    "strikeStep": 10,
+    "cashToken": "25358",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 580
+  },
+  {
+    "symbol": "PHOENIXLTD",
+    "name": "PHOENIXLTD",
+    "lotSize": 350,
+    "strikeStep": 20,
+    "cashToken": "14552",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 1920
+  },
+  {
+    "symbol": "PIDILITIND",
+    "name": "PIDILITIND",
+    "lotSize": 500,
+    "strikeStep": 20,
+    "cashToken": "2664",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 1620
+  },
+  {
+    "symbol": "PIIND",
+    "name": "PIIND",
+    "lotSize": 175,
+    "strikeStep": 50,
+    "cashToken": "24184",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Chemicals & Agri",
+    "spotPrice": 2550
+  },
+  {
+    "symbol": "PNB",
+    "name": "PNB",
+    "lotSize": 8000,
+    "strikeStep": 1,
+    "cashToken": "10666",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 115
+  },
+  {
+    "symbol": "PNBHOUSING",
+    "name": "PNBHOUSING",
+    "lotSize": 650,
+    "strikeStep": 20,
+    "cashToken": "18908",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 1120
+  },
+  {
+    "symbol": "POLICYBZR",
+    "name": "POLICYBZR",
+    "lotSize": 350,
+    "strikeStep": 20,
+    "cashToken": "6656",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 1560
+  },
+  {
+    "symbol": "POLYCAB",
+    "name": "POLYCAB",
+    "lotSize": 125,
+    "strikeStep": 100,
+    "cashToken": "9590",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Capital Goods & Defense",
+    "spotPrice": 8800
+  },
+  {
+    "symbol": "POWERGRID",
+    "name": "POWERGRID",
+    "lotSize": 1900,
+    "strikeStep": 2.5,
+    "cashToken": "14977",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Power & Renewable",
+    "spotPrice": 272.5
+  },
+  {
+    "symbol": "POWERINDIA",
+    "name": "POWERINDIA",
+    "lotSize": 25,
+    "strikeStep": 500,
+    "cashToken": "18457",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 33000
+  },
+  {
+    "symbol": "PREMIERENE",
+    "name": "PREMIERENE",
+    "lotSize": 650,
+    "strikeStep": 20,
+    "cashToken": "25049",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 960
+  },
+  {
+    "symbol": "PRESTIGE",
+    "name": "PRESTIGE",
+    "lotSize": 450,
+    "strikeStep": 20,
+    "cashToken": "20302",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 1540
+  },
+  {
+    "symbol": "RADICO",
+    "name": "RADICO",
+    "lotSize": 150,
+    "strikeStep": 50,
+    "cashToken": "10990",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "FMCG & Consumer",
+    "spotPrice": 4500
+  },
+  {
+    "symbol": "RBLBANK",
+    "name": "RBLBANK",
+    "lotSize": 3175,
+    "strikeStep": 5,
+    "cashToken": "18391",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 405
+  },
+  {
+    "symbol": "RECLTD",
+    "name": "RECLTD",
+    "lotSize": 1575,
+    "strikeStep": 5,
+    "cashToken": "15355",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 335
+  },
+  {
+    "symbol": "RELIANCE",
+    "name": "RELIANCE",
+    "lotSize": 500,
+    "strikeStep": 10,
+    "cashToken": "2885",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Energy & Oil",
+    "spotPrice": 1270
+  },
+  {
+    "symbol": "RVNL",
+    "name": "RVNL",
+    "lotSize": 1925,
+    "strikeStep": 5,
+    "cashToken": "9552",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 220
+  },
+  {
+    "symbol": "SAGILITY",
+    "name": "SAGILITY",
+    "lotSize": 12000,
+    "strikeStep": 1,
+    "cashToken": "27052",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 46
+  },
+  {
+    "symbol": "SAIL",
+    "name": "SAIL",
+    "lotSize": 4700,
+    "strikeStep": 2.5,
+    "cashToken": "2963",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Metals & Mining",
+    "spotPrice": 185
+  },
+  {
+    "symbol": "SBICARD",
+    "name": "SBICARD",
+    "lotSize": 800,
+    "strikeStep": 10,
+    "cashToken": "17971",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 640
+  },
+  {
+    "symbol": "SBILIFE",
+    "name": "SBILIFE",
+    "lotSize": 375,
+    "strikeStep": 20,
+    "cashToken": "21808",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 1780
+  },
+  {
+    "symbol": "SBIN",
+    "name": "SBIN",
+    "lotSize": 750,
+    "strikeStep": 10,
+    "cashToken": "3045",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 1030
+  },
+  {
+    "symbol": "SHREECEM",
+    "name": "SHREECEM",
+    "lotSize": 25,
+    "strikeStep": 250,
+    "cashToken": "3103",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Cement & Construction",
+    "spotPrice": 23750
+  },
+  {
+    "symbol": "SHRIRAMFIN",
+    "name": "SHRIRAMFIN",
+    "lotSize": 825,
+    "strikeStep": 20,
+    "cashToken": "4306",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 1060
+  },
+  {
+    "symbol": "SIEMENS",
+    "name": "SIEMENS",
+    "lotSize": 175,
+    "strikeStep": 50,
+    "cashToken": "3150",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Capital Goods & Defense",
+    "spotPrice": 4000
+  },
+  {
+    "symbol": "SOLARINDS",
+    "name": "SOLARINDS",
+    "lotSize": 50,
+    "strikeStep": 250,
+    "cashToken": "13332",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 20250
+  },
+  {
+    "symbol": "SONACOMS",
+    "name": "SONACOMS",
+    "lotSize": 1225,
+    "strikeStep": 10,
+    "cashToken": "4684",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Automobile",
+    "spotPrice": 790
+  },
+  {
+    "symbol": "SRF",
+    "name": "SRF",
+    "lotSize": 200,
+    "strikeStep": 50,
+    "cashToken": "3273",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Chemicals & Agri",
+    "spotPrice": 2600
+  },
+  {
+    "symbol": "SUNPHARMA",
+    "name": "SUNPHARMA",
+    "lotSize": 350,
+    "strikeStep": 20,
+    "cashToken": "3351",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Healthcare & Pharma",
+    "spotPrice": 1920
+  },
+  {
+    "symbol": "SUPREMEIND",
+    "name": "SUPREMEIND",
+    "lotSize": 175,
+    "strikeStep": 50,
+    "cashToken": "3363",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Capital Goods & Defense",
+    "spotPrice": 3500
+  },
+  {
+    "symbol": "SUZLON",
+    "name": "SUZLON",
+    "lotSize": 12700,
+    "strikeStep": 1,
+    "cashToken": "12018",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Power & Renewable",
+    "spotPrice": 47
+  },
+  {
+    "symbol": "SWIGGY",
+    "name": "SWIGGY",
+    "lotSize": 1825,
+    "strikeStep": 5,
+    "cashToken": "27066",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 285
+  },
+  {
+    "symbol": "TATACONSUM",
+    "name": "TATACONSUM",
+    "lotSize": 550,
+    "strikeStep": 10,
+    "cashToken": "3432",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "FMCG & Consumer",
+    "spotPrice": 1030
+  },
+  {
+    "symbol": "TATAELXSI",
+    "name": "TATAELXSI",
+    "lotSize": 125,
+    "strikeStep": 50,
+    "cashToken": "3411",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 3500
+  },
+  {
+    "symbol": "TATAPOWER",
+    "name": "TATAPOWER",
+    "lotSize": 1450,
+    "strikeStep": 5,
+    "cashToken": "3426",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Power & Renewable",
+    "spotPrice": 365
+  },
+  {
+    "symbol": "TATASTEEL",
+    "name": "TATASTEEL",
+    "lotSize": 2750,
+    "strikeStep": 2.5,
+    "cashToken": "3499",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Metals & Mining",
+    "spotPrice": 187.5
+  },
+  {
+    "symbol": "TCS",
+    "name": "TCS",
+    "lotSize": 225,
+    "strikeStep": 20,
+    "cashToken": "11536",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Information Technology",
+    "spotPrice": 2280
+  },
+  {
+    "symbol": "TECHM",
+    "name": "TECHM",
+    "lotSize": 600,
+    "strikeStep": 20,
+    "cashToken": "13538",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Information Technology",
+    "spotPrice": 1580
+  },
+  {
+    "symbol": "TIINDIA",
+    "name": "TIINDIA",
+    "lotSize": 200,
+    "strikeStep": 50,
+    "cashToken": "312",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 2750
+  },
+  {
+    "symbol": "TITAN",
+    "name": "TITAN",
+    "lotSize": 175,
+    "strikeStep": 50,
+    "cashToken": "3506",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Retail & Consumer",
+    "spotPrice": 5000
+  },
+  {
+    "symbol": "TMPV",
+    "name": "TMPV",
+    "lotSize": 1600,
+    "strikeStep": 5,
+    "cashToken": "3456",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 315
+  },
+  {
+    "symbol": "TORNTPHARM",
+    "name": "TORNTPHARM",
+    "lotSize": 125,
+    "strikeStep": 50,
+    "cashToken": "3518",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Healthcare & Pharma",
+    "spotPrice": 5000
+  },
+  {
+    "symbol": "TRENT",
+    "name": "TRENT",
+    "lotSize": 225,
+    "strikeStep": 50,
+    "cashToken": "1964",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Retail & Consumer",
+    "spotPrice": 2850
+  },
+  {
+    "symbol": "TVSMOTOR",
+    "name": "TVSMOTOR",
+    "lotSize": 175,
+    "strikeStep": 50,
+    "cashToken": "8479",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Automobile",
+    "spotPrice": 4200
+  },
+  {
+    "symbol": "ULTRACEMCO",
+    "name": "ULTRACEMCO",
+    "lotSize": 50,
+    "strikeStep": 40,
+    "cashToken": "11532",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Cement & Construction",
+    "spotPrice": 11560
+  },
+  {
+    "symbol": "UNIONBANK",
+    "name": "UNIONBANK",
+    "lotSize": 4425,
+    "strikeStep": 2.5,
+    "cashToken": "10753",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 182.5
+  },
+  {
+    "symbol": "UNITDSPR",
+    "name": "UNITDSPR",
+    "lotSize": 400,
+    "strikeStep": 20,
+    "cashToken": "10447",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 1460
+  },
+  {
+    "symbol": "UNOMINDA",
+    "name": "UNOMINDA",
+    "lotSize": 550,
+    "strikeStep": 20,
+    "cashToken": "14154",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 1240
+  },
+  {
+    "symbol": "UPL",
+    "name": "UPL",
+    "lotSize": 1355,
+    "strikeStep": 10,
+    "cashToken": "11287",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Chemicals & Agri",
+    "spotPrice": 580
+  },
+  {
+    "symbol": "VBL",
+    "name": "VBL",
+    "lotSize": 1275,
+    "strikeStep": 10,
+    "cashToken": "18921",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "FMCG & Consumer",
+    "spotPrice": 430
+  },
+  {
+    "symbol": "VEDL",
+    "name": "VEDL",
+    "lotSize": 1150,
+    "strikeStep": 5,
+    "cashToken": "3063",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Metals & Mining",
+    "spotPrice": 275
+  },
+  {
+    "symbol": "VMM",
+    "name": "VMM",
+    "lotSize": 4850,
+    "strikeStep": 2.5,
+    "cashToken": "27969",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 107.5
+  },
+  {
+    "symbol": "VOLTAS",
+    "name": "VOLTAS",
+    "lotSize": 375,
+    "strikeStep": 20,
+    "cashToken": "3718",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Capital Goods & Defense",
+    "spotPrice": 1220
+  },
+  {
+    "symbol": "WAAREEENER",
+    "name": "WAAREEENER",
+    "lotSize": 175,
+    "strikeStep": 50,
+    "cashToken": "25907",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Diversified & Others",
+    "spotPrice": 2600
+  },
+  {
+    "symbol": "WIPRO",
+    "name": "WIPRO",
+    "lotSize": 3000,
+    "strikeStep": 2.5,
+    "cashToken": "3787",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Information Technology",
+    "spotPrice": 175
+  },
+  {
+    "symbol": "YESBANK",
+    "name": "YESBANK",
+    "lotSize": 31100,
+    "strikeStep": 1,
+    "cashToken": "11915",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Banking & Financials",
+    "spotPrice": 23
+  },
+  {
+    "symbol": "ZYDUSLIFE",
+    "name": "ZYDUSLIFE",
+    "lotSize": 900,
+    "strikeStep": 10,
+    "cashToken": "7929",
+    "expiries": [
+      "29SEP2026",
+      "27OCT2026",
+      "23NOV2026"
+    ],
+    "sector": "Healthcare & Pharma",
+    "spotPrice": 1160
+  }
+]

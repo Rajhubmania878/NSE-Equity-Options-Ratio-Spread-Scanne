@@ -1,0 +1,6 @@
+{
+  "name": "NSE Equity Options Ratio Spread Scanner",
+  "description": "Real-time institutional-grade NSE equity options ratio spread terminal with live Angel One SmartAPI streaming, exchange-aware strike grid, customizable ratios, executable pricing, and multi-leg risk payoff analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
