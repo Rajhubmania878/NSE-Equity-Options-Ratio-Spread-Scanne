@@ -120,7 +120,7 @@ class AngelSessionManager {
         body: postData
       });
 
-      const data = await res.json() as {
+      const data = (await res.json()) as {
         status?: boolean;
         data?: { jwtToken?: string; feedToken?: string; refreshToken?: string };
       };
@@ -239,7 +239,7 @@ const angelSession = new AngelSessionManager();
 angelSession.login().catch(err => console.error('[AngelOne] Initial login failed:', err));
 
 // ============================================================================
-// AUTHENTICATION & USER DATABASE (PBKDF2 HASHING + BEARER SESSION MANAGEMENT)
+// AUTHENTICATION & USER DATABASE (PBKDF2/SHA256 HASHING + BEARER SESSIONS)
 // ============================================================================
 
 interface UserRecord {
@@ -325,7 +325,7 @@ const defaultUsers: UserRecord[] = [
 
 defaultUsers.forEach(u => usersStore.set(u.id, u));
 
-// Pre-seed some default saved strategies for demo accounts
+// Pre-seed saved strategy for demo
 savedStrategiesStore.push({
   id: 'strat_01',
   userId: 'user_pro_002',
@@ -349,7 +349,7 @@ interface AuthRequest extends Request {
   user?: UserRecord;
 }
 
-// Authentication & Session Protection Middleware
+// Authentication Middleware
 function requireAuth(req: AuthRequest, res: Response, next: NextFunction) {
   const authHeader = req.headers.authorization;
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
@@ -382,342 +382,354 @@ function requireAdmin(req: AuthRequest, res: Response, next: NextFunction) {
   next();
 }
 
+// ============================================================================
+// EXPRESS APPLICATION & ROUTER CONFIGURATION
+// ============================================================================
 const app = express();
+
+// Global Middleware (JSON parser & CORS headers)
 app.use(express.json());
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PATCH, DELETE, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  if (req.method === 'OPTIONS') {
+    return res.sendStatus(200);
+  }
+  next();
+});
 
-async function startServer() {
-  const PORT = Number(process.env.PORT) || 3000;
+// Create API Router
+const apiRouter = express.Router();
 
-  // ============================================================================
-  // PUBLIC AUTHENTICATION ENDPOINTS
-  // ============================================================================
+// Health Check
+apiRouter.get('/health', (_req, res) => {
+  res.json({ status: 'ok', timestamp: Date.now(), service: 'Ratio Spread API' });
+});
 
-  // Signup API
-  app.post('/api/auth/signup', (req, res) => {
-    const { email, password, displayName } = req.body;
-    if (!email || !password || !displayName) {
-      return res.status(400).json({ success: false, message: 'Email, password, and full name are required.' });
+// --- AUTHENTICATION ROUTES ---
+apiRouter.post('/auth/signup', (req, res) => {
+  const { email, password, displayName } = req.body;
+  if (!email || !password || !displayName) {
+    return res.status(400).json({ success: false, message: 'Email, password, and full name are required.' });
+  }
+
+  const cleanEmail = String(email).toLowerCase().trim();
+  for (const u of usersStore.values()) {
+    if (u.email.toLowerCase() === cleanEmail) {
+      return res.status(400).json({ success: false, message: 'An account with this email already exists.' });
     }
+  }
 
-    const cleanEmail = String(email).toLowerCase().trim();
-    for (const u of usersStore.values()) {
-      if (u.email.toLowerCase() === cleanEmail) {
-        return res.status(400).json({ success: false, message: 'An account with this email already exists.' });
-      }
+  const newUser: UserRecord = {
+    id: `user_${Date.now()}_${Math.random().toString(36).substr(2, 5)}`,
+    email: cleanEmail,
+    passwordHash: hashPassword(password),
+    displayName: String(displayName).trim(),
+    role: 'USER',
+    plan: 'FREE',
+    isActive: true,
+    verified: true,
+    createdAt: Date.now(),
+    lastLoginAt: Date.now()
+  };
+
+  usersStore.set(newUser.id, newUser);
+
+  res.json({
+    success: true,
+    message: 'Account created successfully. You can now log in.',
+    requiresVerification: false
+  });
+});
+
+apiRouter.post('/auth/login', (req, res) => {
+  const { email, password } = req.body;
+  if (!email || !password) {
+    return res.status(400).json({ success: false, message: 'Email and password are required.' });
+  }
+
+  const cleanEmail = String(email).toLowerCase().trim();
+  let foundUser: UserRecord | null = null;
+
+  for (const u of usersStore.values()) {
+    if (u.email.toLowerCase() === cleanEmail) {
+      foundUser = u;
+      break;
     }
+  }
 
-    const newUser: UserRecord = {
-      id: `user_${Date.now()}_${Math.random().toString(36).substr(2, 5)}`,
-      email: cleanEmail,
-      passwordHash: hashPassword(password),
-      displayName: String(displayName).trim(),
-      role: 'USER',
-      plan: 'FREE',
-      isActive: true,
-      verified: true, // Auto-verified for seamless preview
-      createdAt: Date.now(),
-      lastLoginAt: Date.now()
-    };
+  if (!foundUser || foundUser.passwordHash !== hashPassword(password)) {
+    return res.status(401).json({ success: false, message: 'Invalid email or password.' });
+  }
 
-    usersStore.set(newUser.id, newUser);
+  if (!foundUser.isActive) {
+    return res.status(403).json({ success: false, message: 'Account is suspended. Please contact system admin.' });
+  }
 
+  foundUser.lastLoginAt = Date.now();
+  const token = `sess_${crypto.randomBytes(24).toString('hex')}`;
+  sessionsStore.set(token, foundUser.id);
+
+  const { passwordHash: _, ...publicProfile } = foundUser;
+  res.json({
+    success: true,
+    token,
+    user: publicProfile
+  });
+});
+
+apiRouter.post('/auth/verify-email', (_req, res) => {
+  res.json({ success: true, message: 'Email address verified successfully.' });
+});
+
+apiRouter.post('/auth/forgot-password', (req, res) => {
+  const { email } = req.body;
+  if (!email) return res.status(400).json({ success: false, message: 'Email required.' });
+
+  res.json({
+    success: true,
+    message: `Password reset instructions have been generated for ${email}. You can now reset your password or sign in.`
+  });
+});
+
+apiRouter.get('/auth/me', requireAuth, (req: AuthRequest, res) => {
+  const { passwordHash: _, ...publicProfile } = req.user!;
+  res.json({ success: true, user: publicProfile });
+});
+
+apiRouter.post('/auth/change-password', requireAuth, (req: AuthRequest, res) => {
+  const { currentPassword, newPassword } = req.body;
+  if (!currentPassword || !newPassword) {
+    return res.status(400).json({ success: false, message: 'Current and new password required.' });
+  }
+
+  if (req.user!.passwordHash !== hashPassword(currentPassword)) {
+    return res.status(400).json({ success: false, message: 'Incorrect current password.' });
+  }
+
+  req.user!.passwordHash = hashPassword(newPassword);
+  res.json({ success: true, message: 'Password updated successfully.' });
+});
+
+apiRouter.post('/auth/logout', (req, res) => {
+  const authHeader = req.headers.authorization;
+  if (authHeader && authHeader.startsWith('Bearer ')) {
+    const token = authHeader.split(' ')[1];
+    sessionsStore.delete(token);
+  }
+  res.json({ success: true });
+});
+
+// --- USER SAVED STRATEGIES ---
+apiRouter.get('/user/saved-strategies', requireAuth, (req: AuthRequest, res) => {
+  const userId = req.user!.id;
+  const userStrategies = savedStrategiesStore.filter(s => s.userId === userId);
+  res.json({ success: true, strategies: userStrategies });
+});
+
+apiRouter.post('/user/saved-strategies', requireAuth, (req: AuthRequest, res) => {
+  const userId = req.user!.id;
+  const {
+    name,
+    exchange,
+    underlying,
+    expiry,
+    ratioLong,
+    ratioShort,
+    gap,
+    cnt,
+    stk,
+    referenceMode,
+    optionType,
+    minStrike,
+    maxStrike
+  } = req.body;
+
+  const newStrategy: SavedStrategyRecord = {
+    id: `strat_${Date.now()}_${Math.random().toString(36).substr(2, 4)}`,
+    userId,
+    name: name || `${underlying} ${ratioLong}:${ratioShort} (Gap ₹${gap})`,
+    exchange: exchange || 'NSE',
+    underlying: underlying || 'RELIANCE',
+    expiry: expiry || '29-Oct-2026',
+    ratioLong: Number(ratioLong) || 1,
+    ratioShort: Number(ratioShort) || 3,
+    gap: Number(gap) || 50,
+    cnt: Number(cnt) || 5,
+    stk: stk || 'AUTO',
+    referenceMode: referenceMode || 'ATM',
+    optionType: optionType || 'CE',
+    minStrike: minStrike ?? 'ALL',
+    maxStrike: maxStrike ?? 'ALL',
+    createdAt: Date.now()
+  };
+
+  savedStrategiesStore.push(newStrategy);
+  res.json({ success: true, strategy: newStrategy });
+});
+
+apiRouter.delete('/user/saved-strategies/:id', requireAuth, (req: AuthRequest, res) => {
+  const userId = req.user!.id;
+  const { id } = req.params;
+
+  const index = savedStrategiesStore.findIndex(s => s.id === id && s.userId === userId);
+  if (index !== -1) {
+    savedStrategiesStore.splice(index, 1);
+    return res.json({ success: true });
+  }
+  res.status(404).json({ success: false, message: 'Strategy configuration not found.' });
+});
+
+// --- ADMIN MANAGEMENT ROUTES ---
+apiRouter.get('/admin/users', requireAuth, requireAdmin, (_req, res) => {
+  const allUsers = Array.from(usersStore.values()).map(({ passwordHash: _, ...publicProfile }) => publicProfile);
+  res.json({ success: true, users: allUsers });
+});
+
+apiRouter.patch('/admin/users/:id/status', requireAuth, requireAdmin, (req, res) => {
+  const { id } = req.params;
+  const { isActive } = req.body;
+  const user = usersStore.get(id);
+  if (!user) return res.status(404).json({ success: false, message: 'User not found.' });
+
+  user.isActive = Boolean(isActive);
+  res.json({ success: true, user });
+});
+
+apiRouter.patch('/admin/users/:id/role', requireAuth, requireAdmin, (req, res) => {
+  const { id } = req.params;
+  const { role } = req.body;
+  const user = usersStore.get(id);
+  if (!user) return res.status(404).json({ success: false, message: 'User not found.' });
+
+  if (role === 'ADMIN' || role === 'USER') {
+    user.role = role;
+  }
+  res.json({ success: true, user });
+});
+
+apiRouter.patch('/admin/users/:id/plan', requireAuth, requireAdmin, (req, res) => {
+  const { id } = req.params;
+  const { plan } = req.body;
+  const user = usersStore.get(id);
+  if (!user) return res.status(404).json({ success: false, message: 'User not found.' });
+
+  if (plan === 'FREE' || plan === 'PRO') {
+    user.plan = plan;
+  }
+  res.json({ success: true, user });
+});
+
+// --- ANGEL ONE MARKET DATA ROUTES ---
+apiRouter.get('/angel/status', (_req, res) => {
+  try {
     res.json({
-      success: true,
-      message: 'Account created successfully. You can now log in.',
-      requiresVerification: false
+      connected: angelSession.isConnected(),
+      clientCode: angelSession.credentials.clientCode,
+      lastLogin: angelSession.isConnected(),
+      mode: angelSession.isConnected() ? 'LIVE_SMARTAPI' : 'SIMULATED'
     });
-  });
-
-  // Login API
-  app.post('/api/auth/login', (req, res) => {
-    const { email, password } = req.body;
-    if (!email || !password) {
-      return res.status(400).json({ success: false, message: 'Email and password are required.' });
-    }
-
-    const cleanEmail = String(email).toLowerCase().trim();
-    let foundUser: UserRecord | null = null;
-
-    for (const u of usersStore.values()) {
-      if (u.email.toLowerCase() === cleanEmail) {
-        foundUser = u;
-        break;
-      }
-    }
-
-    if (!foundUser || foundUser.passwordHash !== hashPassword(password)) {
-      return res.status(401).json({ success: false, message: 'Invalid email or password.' });
-    }
-
-    if (!foundUser.isActive) {
-      return res.status(403).json({ success: false, message: 'Account is suspended. Please contact system admin.' });
-    }
-
-    foundUser.lastLoginAt = Date.now();
-    const token = `sess_${crypto.randomBytes(24).toString('hex')}`;
-    sessionsStore.set(token, foundUser.id);
-
-    const { passwordHash: _, ...publicProfile } = foundUser;
+  } catch (err: unknown) {
     res.json({
-      success: true,
-      token,
-      user: publicProfile
-    });
-  });
-
-  // Forgot Password API
-  app.post('/api/auth/forgot-password', (req, res) => {
-    const { email } = req.body;
-    if (!email) return res.status(400).json({ success: false, message: 'Email required.' });
-
-    res.json({
-      success: true,
-      message: `Password reset instructions have been generated for ${email}. You can now reset your password or sign in.`
-    });
-  });
-
-  // Authenticated Profile Endpoint
-  app.get('/api/auth/me', requireAuth, (req: AuthRequest, res) => {
-    const { passwordHash: _, ...publicProfile } = req.user!;
-    res.json({ success: true, user: publicProfile });
-  });
-
-  // Change Password API
-  app.post('/api/auth/change-password', requireAuth, (req: AuthRequest, res) => {
-    const { currentPassword, newPassword } = req.body;
-    if (!currentPassword || !newPassword) {
-      return res.status(400).json({ success: false, message: 'Current and new password required.' });
-    }
-
-    if (req.user!.passwordHash !== hashPassword(currentPassword)) {
-      return res.status(400).json({ success: false, message: 'Incorrect current password.' });
-    }
-
-    req.user!.passwordHash = hashPassword(newPassword);
-    res.json({ success: true, message: 'Password updated successfully.' });
-  });
-
-  // Logout API
-  app.post('/api/auth/logout', (req, res) => {
-    const authHeader = req.headers.authorization;
-    if (authHeader && authHeader.startsWith('Bearer ')) {
-      const token = authHeader.split(' ')[1];
-      sessionsStore.delete(token);
-    }
-    res.json({ success: true });
-  });
-
-  // ============================================================================
-  // USER-ISOLATED SAVED STRATEGIES API
-  // ============================================================================
-
-  app.get('/api/user/saved-strategies', requireAuth, (req: AuthRequest, res) => {
-    const userId = req.user!.id;
-    const userStrategies = savedStrategiesStore.filter(s => s.userId === userId);
-    res.json({ success: true, strategies: userStrategies });
-  });
-
-  app.post('/api/user/saved-strategies', requireAuth, (req: AuthRequest, res) => {
-    const userId = req.user!.id;
-    const {
-      name,
-      exchange,
-      underlying,
-      expiry,
-      ratioLong,
-      ratioShort,
-      gap,
-      cnt,
-      stk,
-      referenceMode,
-      optionType,
-      minStrike,
-      maxStrike
-    } = req.body;
-
-    const newStrategy: SavedStrategyRecord = {
-      id: `strat_${Date.now()}_${Math.random().toString(36).substr(2, 4)}`,
-      userId,
-      name: name || `${underlying} ${ratioLong}:${ratioShort} (Gap ₹${gap})`,
-      exchange: exchange || 'NSE',
-      underlying: underlying || 'RELIANCE',
-      expiry: expiry || '29-Oct-2026',
-      ratioLong: Number(ratioLong) || 1,
-      ratioShort: Number(ratioShort) || 3,
-      gap: Number(gap) || 50,
-      cnt: Number(cnt) || 5,
-      stk: stk || 'AUTO',
-      referenceMode: referenceMode || 'ATM',
-      optionType: optionType || 'CE',
-      minStrike: minStrike ?? 'ALL',
-      maxStrike: maxStrike ?? 'ALL',
-      createdAt: Date.now()
-    };
-
-    savedStrategiesStore.push(newStrategy);
-    res.json({ success: true, strategy: newStrategy });
-  });
-
-  app.delete('/api/user/saved-strategies/:id', requireAuth, (req: AuthRequest, res) => {
-    const userId = req.user!.id;
-    const { id } = req.params;
-
-    const index = savedStrategiesStore.findIndex(s => s.id === id && s.userId === userId);
-    if (index !== -1) {
-      savedStrategiesStore.splice(index, 1);
-      return res.json({ success: true });
-    }
-    res.status(404).json({ success: false, message: 'Strategy configuration not found.' });
-  });
-
-  // ============================================================================
-  // ADMIN MANAGEMENT API
-  // ============================================================================
-
-  app.get('/api/admin/users', requireAuth, requireAdmin, (_req, res) => {
-    const allUsers = Array.from(usersStore.values()).map(({ passwordHash: _, ...publicProfile }) => publicProfile);
-    res.json({ success: true, users: allUsers });
-  });
-
-  app.patch('/api/admin/users/:id/status', requireAuth, requireAdmin, (req, res) => {
-    const { id } = req.params;
-    const { isActive } = req.body;
-    const user = usersStore.get(id);
-    if (!user) return res.status(404).json({ success: false, message: 'User not found.' });
-
-    user.isActive = Boolean(isActive);
-    res.json({ success: true, user });
-  });
-
-  app.patch('/api/admin/users/:id/role', requireAuth, requireAdmin, (req, res) => {
-    const { id } = req.params;
-    const { role } = req.body;
-    const user = usersStore.get(id);
-    if (!user) return res.status(404).json({ success: false, message: 'User not found.' });
-
-    if (role === 'ADMIN' || role === 'USER') {
-      user.role = role;
-    }
-    res.json({ success: true, user });
-  });
-
-  app.patch('/api/admin/users/:id/plan', requireAuth, requireAdmin, (req, res) => {
-    const { id } = req.params;
-    const { plan } = req.body;
-    const user = usersStore.get(id);
-    if (!user) return res.status(404).json({ success: false, message: 'User not found.' });
-
-    if (plan === 'FREE' || plan === 'PRO') {
-      user.plan = plan;
-    }
-    res.json({ success: true, user });
-  });
-
-  // ============================================================================
-  // PROTECTED MARKET DATA API
-  // ============================================================================
-
-  app.get('/api/angel/status', (_req, res) => {
-    try {
-      res.json({
-        connected: angelSession.isConnected(),
-        clientCode: angelSession.credentials.clientCode,
-        lastLogin: angelSession.isConnected(),
-        mode: angelSession.isConnected() ? 'LIVE_SMARTAPI' : 'SIMULATED'
-      });
-    } catch (err: unknown) {
-      res.json({
-        connected: false,
-        clientCode: angelSession.credentials.clientCode,
-        lastLogin: false,
-        mode: 'SIMULATED',
-        error: (err as Error)?.message || 'Status check failed'
-      });
-    }
-  });
-
-  app.post('/api/angel/login', requireAuth, requireAdmin, async (req, res) => {
-    const { apiKey, clientCode, pin, totpSecret } = req.body;
-    if (apiKey && clientCode && pin && totpSecret) {
-      angelSession.credentials = { apiKey, clientCode, pin, totpSecret };
-    }
-    const success = await angelSession.login();
-    res.json({ success, connected: angelSession.isConnected(), clientCode: angelSession.credentials.clientCode });
-  });
-
-  app.post('/api/angel/quote', requireAuth, async (req, res) => {
-    try {
-      const {
-        exchange = 'NFO',
-        tokens = [],
-        nseTokens = [],
-        nfoTokens = [],
-        bseTokens = [],
-        bfoTokens = []
-      } = req.body;
-      const allFetched: unknown[] = [];
-
-      try {
-        if (Array.isArray(nseTokens) && nseTokens.length > 0) {
-          const fetched = await angelSession.fetchQuote('NSE', nseTokens);
-          allFetched.push(...fetched);
-        }
-        if (Array.isArray(nfoTokens) && nfoTokens.length > 0) {
-          const fetched = await angelSession.fetchQuote('NFO', nfoTokens);
-          allFetched.push(...fetched);
-        }
-        if (Array.isArray(bseTokens) && bseTokens.length > 0) {
-          const fetched = await angelSession.fetchQuote('BSE', bseTokens);
-          allFetched.push(...fetched);
-        }
-        if (Array.isArray(bfoTokens) && bfoTokens.length > 0) {
-          const fetched = await angelSession.fetchQuote('BFO', bfoTokens);
-          allFetched.push(...fetched);
-        }
-        if (
-          Array.isArray(tokens) &&
-          tokens.length > 0 &&
-          nseTokens.length === 0 &&
-          nfoTokens.length === 0 &&
-          bseTokens.length === 0 &&
-          bfoTokens.length === 0
-        ) {
-          const fetched = await angelSession.fetchQuote(exchange as 'NSE' | 'NFO' | 'BSE' | 'BFO', tokens);
-          allFetched.push(...fetched);
-        }
-      } catch (innerErr) {
-        console.warn('[AngelOne] SmartAPI fetching failed, falling back to simulated quotes.', (innerErr as Error).message);
-      }
-
-      res.json({ success: true, data: allFetched, simulatedFallback: allFetched.length === 0 });
-    } catch (err: unknown) {
-      const error = err as Error;
-      res.json({ success: true, data: [], error: error?.message || 'Quote fetch fallback triggered' });
-    }
-  });
-
-  // Mount Vite middlewares in development
-  if (!process.env.VERCEL) {
-    const isDev = process.env.NODE_ENV !== 'production';
-    if (isDev) {
-      const vitePkg = 'vite';
-      const { createServer: createViteServer } = await import(vitePkg);
-      const vite = await createViteServer({
-        server: { middlewareMode: true },
-        appType: 'spa'
-      });
-      app.use(vite.middlewares);
-    } else {
-      app.use(express.static(path.join(__dirname, 'dist')));
-      app.get('*', (_req, res) => {
-        res.sendFile(path.join(__dirname, 'dist', 'index.html'));
-      });
-    }
-
-    app.listen(PORT, '0.0.0.0', () => {
-      console.log(`[Server] Live Protected Terminal Server running on http://0.0.0.0:${PORT}`);
+      connected: false,
+      clientCode: angelSession.credentials.clientCode,
+      lastLogin: false,
+      mode: 'SIMULATED',
+      error: (err as Error)?.message || 'Status check failed'
     });
   }
+});
+
+apiRouter.post('/angel/login', requireAuth, requireAdmin, async (req, res) => {
+  const { apiKey, clientCode, pin, totpSecret } = req.body;
+  if (apiKey && clientCode && pin && totpSecret) {
+    angelSession.credentials = { apiKey, clientCode, pin, totpSecret };
+  }
+  const success = await angelSession.login();
+  res.json({ success, connected: angelSession.isConnected(), clientCode: angelSession.credentials.clientCode });
+});
+
+apiRouter.post('/angel/quote', requireAuth, async (req, res) => {
+  try {
+    const {
+      exchange = 'NFO',
+      tokens = [],
+      nseTokens = [],
+      nfoTokens = [],
+      bseTokens = [],
+      bfoTokens = []
+    } = req.body;
+    const allFetched: unknown[] = [];
+
+    try {
+      if (Array.isArray(nseTokens) && nseTokens.length > 0) {
+        const fetched = await angelSession.fetchQuote('NSE', nseTokens);
+        allFetched.push(...fetched);
+      }
+      if (Array.isArray(nfoTokens) && nfoTokens.length > 0) {
+        const fetched = await angelSession.fetchQuote('NFO', nfoTokens);
+        allFetched.push(...fetched);
+      }
+      if (Array.isArray(bseTokens) && bseTokens.length > 0) {
+        const fetched = await angelSession.fetchQuote('BSE', bseTokens);
+        allFetched.push(...fetched);
+      }
+      if (Array.isArray(bfoTokens) && bfoTokens.length > 0) {
+        const fetched = await angelSession.fetchQuote('BFO', bfoTokens);
+        allFetched.push(...fetched);
+      }
+      if (
+        Array.isArray(tokens) &&
+        tokens.length > 0 &&
+        nseTokens.length === 0 &&
+        nfoTokens.length === 0 &&
+        bseTokens.length === 0 &&
+        bfoTokens.length === 0
+      ) {
+        const fetched = await angelSession.fetchQuote(exchange as 'NSE' | 'NFO' | 'BSE' | 'BFO', tokens);
+        allFetched.push(...fetched);
+      }
+    } catch (innerErr) {
+      console.warn('[AngelOne] SmartAPI fetching failed, falling back to simulated quotes.', (innerErr as Error).message);
+    }
+
+    res.json({ success: true, data: allFetched, simulatedFallback: allFetched.length === 0 });
+  } catch (err: unknown) {
+    const error = err as Error;
+    res.json({ success: true, data: [], error: error?.message || 'Quote fetch fallback triggered' });
+  }
+});
+
+// Mount apiRouter on both '/api' and '/' to guarantee seamless Vercel and local routing
+app.use('/api', apiRouter);
+app.use('/', apiRouter);
+
+// ============================================================================
+// STANDALONE / LOCAL SERVER RUNNER (DISABLED ON VERCEL SERVERLESS)
+// ============================================================================
+async function startServer() {
+  const PORT = Number(process.env.PORT) || 3000;
+  const isDev = process.env.NODE_ENV !== 'production';
+
+  if (isDev) {
+    const vitePkg = 'vite';
+    const { createServer: createViteServer } = await import(vitePkg);
+    const vite = await createViteServer({
+      server: { middlewareMode: true },
+      appType: 'spa'
+    });
+    app.use(vite.middlewares);
+  } else {
+    app.use(express.static(path.join(__dirname, 'dist')));
+    app.get('*', (_req, res) => {
+      res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+    });
+  }
+
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`[Server] Live Protected Terminal Server running on http://0.0.0.0:${PORT}`);
+  });
 }
 
 if (!process.env.VERCEL) {
