@@ -362,11 +362,11 @@ function requireAdmin(req: AuthRequest, res: Response, next: NextFunction) {
   next();
 }
 
-async function startServer() {
-  const app = express();
-  const PORT = Number(process.env.PORT) || 3000;
+const app = express();
+app.use(express.json());
 
-  app.use(express.json());
+async function startServer() {
+  const PORT = Number(process.env.PORT) || 3000;
 
   // ============================================================================
   // PUBLIC AUTHENTICATION ENDPOINTS
@@ -663,26 +663,32 @@ async function startServer() {
   });
 
   // Mount Vite middlewares in development
-  const isDev = process.env.NODE_ENV !== 'production';
-  if (isDev) {
-    const vite = await createViteServer({
-      server: { middlewareMode: true },
-      appType: 'spa'
-    });
-    app.use(vite.middlewares);
-  } else {
-    app.use(express.static(path.join(__dirname, 'dist')));
-    app.get('*', (_req, res) => {
-      res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+  if (!process.env.VERCEL) {
+    const isDev = process.env.NODE_ENV !== 'production';
+    if (isDev) {
+      const vite = await createViteServer({
+        server: { middlewareMode: true },
+        appType: 'spa'
+      });
+      app.use(vite.middlewares);
+    } else {
+      app.use(express.static(path.join(__dirname, 'dist')));
+      app.get('*', (_req, res) => {
+        res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+      });
+    }
+
+    app.listen(PORT, '0.0.0.0', () => {
+      console.log(`[Server] Live Protected Terminal Server running on http://0.0.0.0:${PORT}`);
     });
   }
+}
 
-  app.listen(PORT, '0.0.0.0', () => {
-    console.log(`[Server] Live Protected Terminal Server running on http://0.0.0.0:${PORT}`);
+if (!process.env.VERCEL) {
+  startServer().catch(err => {
+    console.error('[Server] Fatal startup error:', err);
+    process.exit(1);
   });
 }
 
-startServer().catch(err => {
-  console.error('[Server] Fatal startup error:', err);
-  process.exit(1);
-});
+export default app;
